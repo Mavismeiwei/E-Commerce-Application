@@ -5,36 +5,28 @@
                 <form #productFrom="ngForm" (ngSubmit)="addProduct(productFrom)">
                     <mat-form-field appearance="outline" class="w-100">
                         <mat-label>Product Name</mat-label>
-                        <input matInput 
-                               placeholder="Please enter the product name."
-                               [(ngModel)]="product.productName"
-                               name="productName">
+                        <input matInput placeholder="Please enter the product name." [(ngModel)]="product.productName"
+                            name="productName">
                     </mat-form-field>
-            
+
                     <mat-form-field appearance="outline" class="w-100">
                         <mat-label>Product Description</mat-label>
-                        <input matInput 
-                               placeholder="Please enter the product description."
-                               [(ngModel)]="product.productDescription"
-                               name="productDescription">
+                        <input matInput placeholder="Please enter the product description."
+                            [(ngModel)]="product.productDescription" name="productDescription">
                     </mat-form-field>
-            
+
                     <mat-form-field appearance="outline" class="w-100">
                         <mat-label>Product Actual Price</mat-label>
-                        <input matInput 
-                               placeholder="Please enter the actual price."
-                               [(ngModel)]="product.productActualPrice"
-                               name="productActualPrice">
+                        <input matInput placeholder="Please enter the actual price."
+                            [(ngModel)]="product.productActualPrice" name="productActualPrice">
                     </mat-form-field>
-            
+
                     <mat-form-field appearance="outline" class="w-100">
                         <mat-label>Product Discounted Price</mat-label>
-                        <input matInput 
-                               placeholder="Please enter the discounted price."
-                               [(ngModel)]="product.productDiscountedPrice"
-                               name="productDiscountedPrice">
+                        <input matInput placeholder="Please enter the discounted price."
+                            [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice">
                     </mat-form-field>
-            
+
                     <div align="end">
                         <button mat-stroked-button color="primary" style="margin-right: 5px;">Clear</button>
                         <button mat-stroked-button color="primary" type="submit">Add Product</button>
@@ -42,7 +34,35 @@
                 </form>
             </div>
             <div class="col-6">
-                Image area
+                <div>
+                    
+                    <div class="dropzone"
+                        appDrag
+                        (files)="fileDropped($event)"
+                    >
+                        <div class="text-wrapper">
+                            <div class="centered">
+                                Drag and drop your files or 
+                                <a (click)="selectFile.click()" class="browse-button">browse</a> 
+                                files.
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="file" style="display: none;" multiple #selectFile (change)="onFileSelected($event)">
+                </div>
+                <div class="mt-5">
+                    <div class="row">
+                        <mat-grid-list cols="4" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of product.productImages; let i = index;">
+                                <div style="position: relative;">
+                                    <span class="btn-remove-image" (click)="removeImages(i)">X</span>
+                                    <img [src]="file.url" width="100px" height="100px">
+                                </div>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
