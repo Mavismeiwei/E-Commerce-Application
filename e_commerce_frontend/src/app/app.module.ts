@@ -26,6 +26,8 @@ import { DragDirective } from './drag.directive';
 import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import { ShowProductDialogComponent } from './show-product-dialog/show-product-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import {MatIconModule} from '@angular/material/icon';
     AddNewProductComponent,
     DragDirective,
     ShowProductDetailsComponent,
+    ShowProductDialogComponent,
 
   ],
   imports: [
@@ -55,7 +58,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatGridListModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [
     AuthGuard,
