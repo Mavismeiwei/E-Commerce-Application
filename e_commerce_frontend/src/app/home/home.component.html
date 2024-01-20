@@ -1,5 +1,24 @@
 <div class="container mt-5">
-   <div class="card text-center" style="padding: 20px;">
-    <h1>This is Home Page</h1>
-   </div>
+   <mat-grid-list cols="4" rowHeight="3:5">
+      <mat-grid-tile *ngFor="let p of productDetails">
+         <div class="row p-5">
+            <div class="image-container">
+               <img class="home-page-product-image" [src]="p.productImages[0].url">
+            </div>
+            <div class="mt-3">
+               <p><b>{{p.productName}}</b></p>
+            </div> 
+            <div class="mt-2">
+               <p style="white-space: inherit; height: 60px; width: 288px; overflow: hidden; text-overflow: ellipsis;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat nam nisi minus accusantium vel deserunt sed esse rerum neque fugit amet hic illum dolorem numquam eveniet aspernatur, officiis necessitatibus. Voluptas?</p>
+            </div> 
+            <div class="mt-2">
+               <b>$ {{p.productDiscountedPrice}}</b> &nbsp; <b style="text-decoration: line-through;">$ {{p.productActualPrice}}</b>
+            </div>  
+            <div class="mt-2">
+               <button mat-raised-button type="button" color="warn" (click)="showProductDetails(p.productId)">View Details</button>
+            </div>
+         </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    
 </div>
