@@ -24,12 +24,12 @@ public class ProductController {
     @PreAuthorize("hasRole('Admin')")
     @PostMapping(value = {"/addNewProduct"}, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public Product addNewProduct(@RequestPart("product") Product product,
-                                 @RequestPart("imageFile") MultipartFile[] file){
+                                 @RequestPart("imageFile") MultipartFile[] file) {
 
         try {
-           Set<ImageModel> images = uploadImage(file);
-           product.setProductImages(images);
-           return productService.addNewProduct(product);
+            Set<ImageModel> images = uploadImage(file);
+            product.setProductImages(images);
+            return productService.addNewProduct(product);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -41,7 +41,7 @@ public class ProductController {
     public Set<ImageModel> uploadImage(MultipartFile[] multipartFiles) throws IOException {
         Set<ImageModel> imageModels = new HashSet<>();
 
-        for (MultipartFile file: multipartFiles) {
+        for (MultipartFile file : multipartFiles) {
             ImageModel imageModel = new ImageModel(
                     file.getOriginalFilename(),
                     file.getContentType(),
@@ -54,19 +54,27 @@ public class ProductController {
     }
 
     @GetMapping({"/getAllProducts"})
-    public List<Product> getAllProducts(){
+    public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 
     @GetMapping({"/getProductDetailsById/{productId}"})
-    public Product getProductDetailsById(@PathVariable("productId") Integer productId){
+    public Product getProductDetailsById(@PathVariable("productId") Integer productId) {
         return productService.getProductDetailsById(productId);
     }
 
     @PreAuthorize("hasRole('Admin')")
     @DeleteMapping({"/deleteProductDetails/{productId}"})
     public void deleteProductDetails(@PathVariable("productId") Integer productId) {
-    productService.deleteProductDescription(productId);
+        productService.deleteProductDescription(productId);
+    }
+
+    @PreAuthorize("hasRole('User')")
+    @GetMapping({"/getProductDetails/{isSingleProductCheckout}/{productId}"})
+    public List<Product> getProductDetails(@PathVariable(name = "isSingleProductCheckout") boolean isSingleProductCheckout,
+                                           @PathVariable(name = "productId") Integer productId) {
+        return productService.getProductDetails(isSingleProductCheckout, productId);
+
     }
 
 }
