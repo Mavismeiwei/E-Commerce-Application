@@ -1,5 +1,5 @@
 <div class="container mt-5">
-   <mat-grid-list cols="4" rowHeight="3:5">
+   <mat-grid-list cols="4" rowHeight="3:5" gutterSize="10px">
       <mat-grid-tile *ngFor="let p of productDetails">
          <div class="row p-5">
             <div class="image-container">
@@ -20,5 +20,7 @@
          </div>
       </mat-grid-tile>
     </mat-grid-list>
-    
+    <div class="text-center mt-5" style="padding-bottom: 50px;" *ngIf="showLoadButton">
+      <button type="button" mat-raised-button color="primary" (click)="loadMoreProduct()"> Load More </button>
+    </div>
 </div>
