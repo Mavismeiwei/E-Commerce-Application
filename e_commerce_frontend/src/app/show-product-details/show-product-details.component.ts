@@ -31,9 +31,16 @@ export class ShowProductDetailsComponent implements OnInit {
     this.getAllProducts();
   }
 
-  public getAllProducts(){
+  searchByKeyword(searchkeyword) {
+    console.log(searchkeyword);
+    this.pageNumber = 0;
+    this.productDetails = [];
+    this.getAllProducts(searchkeyword);
+  }
+
+  public getAllProducts(searchkeyword: string = ""){
     this.showTable = false;
-    this.productService.getAllProducts(this.pageNumber)
+    this.productService.getAllProducts(this.pageNumber, searchkeyword)
     .pipe(
      map((x: Product[], i) => x.map((product: Product) => this.imageProcessingService.createImages(product)))
     )
