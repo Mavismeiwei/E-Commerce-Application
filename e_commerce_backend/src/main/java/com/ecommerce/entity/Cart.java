@@ -8,23 +8,27 @@ public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer catId;
+    private Integer cartId;
     @OneToOne
     private Product product;
     @OneToOne
     private User user;
+
+    public Cart() {
+
+    }
 
     public Cart(Product product, User user) {
         this.product = product;
         this.user = user;
     }
 
-    public Integer getCatId() {
-        return catId;
+    public Integer getCartId() {
+        return cartId;
     }
 
-    public void setCatId(Integer catId) {
-        this.catId = catId;
+    public void setCartId(Integer cartId) {
+        this.cartId = cartId;
     }
 
     public Product getProduct() {
@@ -43,3 +47,5 @@ public class Cart {
         this.user = user;
     }
 }
+
+

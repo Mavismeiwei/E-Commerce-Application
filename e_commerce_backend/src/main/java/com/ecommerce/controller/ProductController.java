@@ -77,7 +77,6 @@ public class ProductController {
     public List<Product> getProductDetails(@PathVariable(name = "isSingleProductCheckout") boolean isSingleProductCheckout,
                                            @PathVariable(name = "productId") Integer productId) {
         return productService.getProductDetails(isSingleProductCheckout, productId);
-
     }
 
 }
