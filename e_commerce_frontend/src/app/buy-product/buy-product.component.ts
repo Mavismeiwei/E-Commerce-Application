@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { OrderDetails } from '../_model/order-details.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../_model/product.model';
 import { ProductService } from '../_services/product.service';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-buy-product',
@@ -11,6 +12,8 @@ import { ProductService } from '../_services/product.service';
   styleUrls: ['./buy-product.component.css']
 })
 export class BuyProductComponent implements OnInit {
+
+  @ViewChild('orderForm') orderForm!: NgForm;
 
   isSingleProductCheckout: string = '';
   productDetails: Product[] = [] ;
@@ -25,7 +28,8 @@ export class BuyProductComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
     private productService: ProductService,
-    private router: Router) { }
+    private router: Router,
+    private sharedService: SharedService) { }
 
   ngOnInit(): void {
     this.productDetails = this.activatedRoute.snapshot.data['productDetails'];
@@ -39,20 +43,25 @@ export class BuyProductComponent implements OnInit {
 
     console.log(this.productDetails);
     console.log(this.orderDetails);
+
   }
 
   public placeOrder(orderForm: NgForm) {
     this.productService.placeOrder(this.orderDetails, this.isSingleProductCheckout).subscribe(
       (resp) => {
         console.log(resp);
+        const grandTotal = this.getCalculatedGrandTotal();
+        this.sharedService.setGrandTotal(grandTotal); // Set the grand total in the shared service
+        this.router.navigate(["/payment"]);
         orderForm.reset();
-        this.router.navigate(["/orderConfirm"]);
       },
       (err) => {
         console.log(err);
       }
     );
   }
+
+
 
   getQuantityForProduct(productId) {
     const filteredProduct = this.orderDetails.orderProductQuantityList.filter(

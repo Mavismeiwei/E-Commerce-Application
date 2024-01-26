@@ -1,0 +1,11 @@
+<div class="container text-center mt-5">
+    <div class="card">
+        <p>Total amount to Pay: $ {{ grandTotal }}</p>
+        <h1 class="info">Please do not refresh the browser while the transaction is processing</h1>
+    </div>
+    <div class="payment-container">
+    <div #paymentRef ></div>
+    </div>
+    <button class="back" mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+</div>
+    
