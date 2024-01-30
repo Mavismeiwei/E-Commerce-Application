@@ -25,6 +25,7 @@ export class ProductViewDetailsComponent implements OnInit {
   addToCart(productId) {
     this.productService.addToCart(productId).subscribe(
       (response) => {
+        window.alert("Add to cart successfully!");
         console.log(response);
       }, (error) => {
         console.log(error);
