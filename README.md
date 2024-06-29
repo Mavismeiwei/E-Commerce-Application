@@ -55,71 +55,76 @@ This project is a full-stack E-Commerce platform specifically designed for a Bea
 
 Product layout
 
-![image-20240629094021031](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094021031.png)
+<img width="626" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/a4ed9daf-b7ea-4cf8-93c2-3043f2774181">
 
 Pagination for load more button, when click this button, it will show more line, if reach the bottom, the button disappears.
 
-![image-20240629094343132](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094343132.png)
+<img width="604" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/519d4d0a-ddcb-435d-b09e-16e853014986">
 
 Search bar
 
-![image-20240629094407641](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094407641.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/c2ac535c-493a-4b4d-ad67-f104ea527aae">
+
 
 * Login/Register Page (Connect with MySQL)
 
-![image-20240629094440231](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094440231.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/3ccbafe2-d599-4b4c-a781-e602084bb5af">
 
 Nav bar for user (Home, Cart, My Orders)
 
-![image-20240629094545786](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094545786.png)
-
-
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/dfcbf907-d0e3-4727-995f-b2e3a0dfc41a">
 
 * Product Detail
 
-![image-20240629094639117](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094639117.png)
+<img width="624" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/aa0f56ba-83e3-482b-b25b-63fe6f83bc6d">
 
 * Add to Cart
 
-![image-20240629094731370](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094731370.png)
+<img width="622" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/44bddc36-7b8e-45f1-9fba-463c8dd01847">
 
 * My Cart
 
-![image-20240629094813859](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094813859.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/94c412fb-b43a-4c74-aa16-abd5e10b140d">
 
 * Place order page
 
-![image-20240629094911291](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629094911291.png)
+<img width="623" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/fb17dfdb-6a17-4ddb-87c2-6970f298238a">
 
 * Checkout page
 
-![image-20240126141603532](/Users/meiwei/Library/Application Support/typora-user-images/image-20240126141603532.png)
+Use PayPal test card numbers
 
-![image-20240620085106154](/Users/meiwei/Library/Application Support/typora-user-images/image-20240620085106154.png)
+<img width="654" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/6886e60d-ae2f-4f83-9e20-af559eb736b4">
+
+<img width="611" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/47975be0-90f6-4b8c-9000-b78077175a9d">
+
+* Order place successfully
+  
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/5e6df96c-a7ba-429b-aa46-741199066939">
 
 * Admin Page (Login as admin), differnt nav bar
 
-![image-20240629095131845](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095131845.png)
+<img width="626" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/0845a241-51d8-4476-83b2-a6e3574fc508">
 
 * Add product page
 
-<img src="/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095229115.png" alt="image-20240629095229115" style="zoom:50%;" />
+<img width="629" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/822d8488-847d-4a84-b47a-ccf25fb9ee19">
 
 * Show product detail
 
-![image-20240629095304238](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095304238.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/85aa287e-8d80-4eda-8539-98da367ae7f8">
 
 * See imgs detail action
 
-![image-20240629095343915](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095343915.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/5ef27a59-2c9a-4aa6-8fc0-8c53f58fec5e">
 
 * Edit product action
 
-![image-20240629095414134](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095414134.png)
+<img width="626" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/af69ac14-262b-46e8-9e4e-464ef2e8e02d">
 
 * Order Information (mark delivered)
 
-![image-20240629095442447](/Users/meiwei/Library/Application Support/typora-user-images/image-20240629095442447.png)
+<img width="625" alt="image" src="https://github.com/Mavismeiwei/E-Commerce-Application/assets/114769263/8a2ed9e0-a99a-492e-bc99-8eaf8db7010b">
 
 ---
 
